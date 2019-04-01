@@ -216,7 +216,7 @@
 }
 
 /////////////////////////////
-//Legal Text
+//Legal
 /////////////////////////////
 
 .legal {
@@ -249,5 +249,18 @@
                 fill: var(--color-primary-light);
             }
         }
+    }
+}
+
+/////////////////////////////
+//Gallery
+/////////////////////////////
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;
     }
 }

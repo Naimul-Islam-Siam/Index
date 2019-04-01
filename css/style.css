@@ -165,6 +165,12 @@ body {
       .legal-nav__icon:active {
         fill: var(--color-primary-light); }
 
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
 .container {
   max-width: 120rem;
   background-color: var(--grey-light-1);
@@ -192,7 +198,6 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: red;
   flex-grow: 1;
   height: 80rem; }
 
