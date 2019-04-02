@@ -155,11 +155,25 @@
 
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: 56.25em) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+
+            @media only screen and (max-width: 56.25em) {
+                margin-bottom: 0;
+                margin-right: 0.5rem;
+            }
+        }
+
+        @media only screen and (max-width: 56.25em) {
+            flex: 1;
         }
 
         &::before {
@@ -202,6 +216,11 @@
 
         z-index: 10;
         position: relative; //important! otherwise z-index won't work
+
+        @media only screen and (max-width: 56.25em) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -224,6 +243,10 @@
     color: var(--grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: 56.25em) {
+        display: none;
+    }
 
     &-nav {
         list-style: none;
@@ -456,7 +479,9 @@
         margin-right: auto;
     }
 
-    &__friends {}
+    &__friends {
+        display: flex;
+    }
 
     &__photo {
         width: 4rem;
@@ -466,7 +491,7 @@
         box-sizing: content-box;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -481,6 +506,11 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
+
+    @media only screen and (max-width: 56.25em) {
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+    }
 
     font-size: 1.4rem;
 
@@ -537,6 +567,10 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only screen and (max-width: 56.25em) {
+        padding: 2rem;
+    }
+
     &__heading {
         font-size: 2rem;
         font-weight: 300;
@@ -570,12 +604,6 @@
 
     &__visible {
         padding: 2rem 7.5rem;
-
-        &-icon {
-            width: 1.6rem;
-            height: 1.6rem;
-            fill: #fff;
-        }
     }
 
     &__invisible {

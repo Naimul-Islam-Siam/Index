@@ -13,6 +13,9 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -108,10 +111,21 @@ body {
   list-style: none;
   font-size: 1.4rem;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 0.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item::before {
       content: "";
       height: 100%;
@@ -137,6 +151,10 @@ body {
     align-items: center;
     z-index: 10;
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -148,6 +166,9 @@ body {
   color: var(--grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
   .legal-nav {
     list-style: none;
     margin-top: 2rem; }
@@ -278,6 +299,8 @@ body {
   font-size: 1.3rem; }
   .recommend__count {
     margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     width: 4rem;
     height: 4rem;
@@ -285,7 +308,7 @@ body {
     border: 3px solid #fff;
     box-sizing: content-box; }
     .recommend__photo:not(:last-child) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
 
 .review {
   background-color: #fff;
@@ -293,6 +316,10 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 2.5rem; } }
   .review__text {
     margin-bottom: 2rem; }
   .review__user {
@@ -323,6 +350,9 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2rem; } }
   .cta__heading {
     font-size: 2rem;
     font-weight: 300;
@@ -347,10 +377,6 @@ body {
     transition: all 0.2s; }
   .btn__visible {
     padding: 2rem 7.5rem; }
-    .btn__visible-icon {
-      width: 1.6rem;
-      height: 1.6rem;
-      fill: #fff; }
   .btn__invisible {
     position: absolute;
     left: 0;
@@ -372,6 +398,11 @@ body {
   box-shadow: var(--shadow-black);
   min-height: 50rem;
   margin: 8rem auto; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   background-color: #fff;
@@ -384,6 +415,9 @@ body {
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--grey-dark-1);
@@ -400,6 +434,9 @@ body {
   display: flex;
   padding: 4.5rem;
   border-bottom: var(--line); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
 
 .description {
   background-color: #fff;
@@ -408,6 +445,10 @@ body {
   margin-right: 4.5rem;
   box-shadow: var(--shadow-light);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
 
 .user-review {
   flex: 1;
