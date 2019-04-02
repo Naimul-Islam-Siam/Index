@@ -173,6 +173,7 @@ body {
 
 .overview {
   display: flex;
+  background-color: #fff;
   align-items: center;
   border-bottom: 1px solid var(--grey-light-2); }
   .overview__heading {
@@ -239,6 +240,48 @@ body {
     transform: scale(1);
     box-shadow: none; } }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+    .list__item::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      margin-right: 0.7rem;
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover; }
+
+.recommend {
+  display: flex;
+  align-items: center;
+  color: var(--grey-dark-3);
+  font-size: 1.3rem; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-sizing: content-box; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
+
 .container {
   max-width: 120rem;
   background-color: var(--grey-light-1);
@@ -249,7 +292,7 @@ body {
 .header {
   background-color: #fff;
   height: 7rem;
-  border-bottom: 1px solid var(--grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -266,8 +309,26 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  flex-grow: 1;
-  height: 80rem; }
+  flex-grow: 1; }
+
+.detail {
+  background-color: var(--grey-light-1);
+  display: flex;
+  padding: 4.5rem;
+  border-bottom: var(--line); }
+
+.description {
+  background-color: #fff;
+  flex: 0 0 60%;
+  padding: 3rem;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-light);
+  font-size: 1.4rem; }
+
+.user-review {
+  background-color: #fff;
+  flex: 1;
+  box-shadow: var(--shadow-light); }
 
 /*
 ::root {
@@ -286,4 +347,6 @@ body {
   --grey-dark-1: #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
-  --shadow-black: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+  --shadow-black: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--grey-light-2); }

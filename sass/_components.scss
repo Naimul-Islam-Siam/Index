@@ -271,6 +271,7 @@
 
 .overview {
     display: flex;
+    background-color: #fff;
 
     align-items: center;
     border-bottom: 1px solid var(--grey-light-2);
@@ -377,5 +378,86 @@
     100% {
         transform: scale(1);
         box-shadow: none;
+    }
+}
+
+/////////////////////////////
+//Paragraph
+/////////////////////////////
+
+.paragraph {
+    &:not(:last-of-type) {
+        margin-bottom: 2rem;
+    }
+}
+
+/////////////////////////////
+//List
+/////////////////////////////
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+
+        &::before {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            display: inline-block; //important, otherwise doesn't show
+            margin-right: 0.7rem;
+
+            // Older Browser 
+            // background-image: url(../img/chevron-thin-right.svg);
+            // background-size: cover;
+
+            //Modern Browser 
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover; //cause icon is larger than background's size : 1px
+
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+        }
+    }
+}
+
+/////////////////////////////
+//Recommend
+/////////////////////////////
+
+.recommend {
+    display: flex;
+    align-items: center;
+
+    color: var(--grey-dark-3);
+    font-size: 1.3rem;
+
+    &__count {
+        margin-right: auto;
+    }
+
+    &__friends {}
+
+    &__photo {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-sizing: content-box;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
     }
 }
