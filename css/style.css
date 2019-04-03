@@ -27,6 +27,10 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh; }
 
+::selection {
+  background-color: var(--color-primary);
+  color: #fff; }
+
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
@@ -36,6 +40,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 80%;
+      margin: 0 auto;
+      margin-bottom: 6px; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -82,6 +92,9 @@ body {
     align-items: center; }
     .user-nav > *:hover {
       background-color: var(--grey-light-2); }
+    @media only screen and (max-width: 31.25em) {
+      .user-nav > * {
+        padding: 0 1.2rem; } }
   .user-nav__icon-box {
     position: relative; }
   .user-nav__icon {
@@ -101,11 +114,23 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media only screen and (max-width: 31.25em) {
+        .user-nav__icon-notification {
+          top: 1rem;
+          right: 0.2rem; } }
   .user-nav__user-photo {
     height: 3.75rem;
     width: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem; }
+    @media only screen and (max-width: 31.25em) {
+      .user-nav__user-photo {
+        height: 3.2rem;
+        width: 3.2rem;
+        margin-right: 0.6rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .user-nav__user-name {
+      font-size: 1.2rem; } }
 
 .side-nav {
   list-style: none;
@@ -115,6 +140,13 @@ body {
     .side-nav {
       display: flex;
       margin: 0; } }
+  @media only screen and (max-width: 34.375em) {
+    .side-nav {
+      font-size: 1rem;
+      height: 5rem; } }
+  @media only screen and (max-width: 21.875em) {
+    .side-nav {
+      font-size: 0.9rem; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
@@ -126,6 +158,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .side-nav__item {
         flex: 1; } }
+    @media only screen and (max-width: 28.125em) {
+      .side-nav__item {
+        height: 5rem; } }
     .side-nav__item::before {
       content: "";
       height: 100%;
@@ -155,11 +190,25 @@ body {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
         padding: 2rem; } }
+    @media only screen and (max-width: 28.125em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        height: 5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     fill: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 34.375em) {
+      .side-nav__icon {
+        margin: 0;
+        margin-right: 0.75rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .side-nav__icon {
+        margin-bottom: 3px; } }
+    @media only screen and (max-width: 28.125em) {
+      .side-nav__icon {
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
@@ -188,9 +237,24 @@ body {
 
 .gallery {
   display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery__item {
+      min-height: 20rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .gallery__item {
+      min-height: 18rem; } }
+  @media only screen and (max-width: 28.125em) {
+    .gallery__item {
+      min-height: 0; } }
   .gallery__photo {
     width: 100%;
     display: block; }
+    @media only screen and (max-width: 37.5em) {
+      .gallery__photo {
+        height: 100%; } }
+    @media only screen and (max-width: 28.125em) {
+      .gallery__photo {
+        min-height: 0; } }
 
 .overview {
   display: flex;
@@ -203,9 +267,25 @@ body {
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 41.56em) {
+      .overview__heading {
+        font-size: 2.1rem;
+        letter-spacing: 0.7px;
+        padding: 1.2rem 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__heading {
+        font-size: 1.9rem;
+        letter-spacing: 0.7px;
+        padding: 1.2rem 2rem; } }
   .overview__stars {
     display: flex;
     margin-right: auto; }
+    @media only screen and (max-width: 41.56em) {
+      .overview__stars {
+        margin-right: 7rem; } }
+    @media only screen and (max-width: 28.125em) {
+      .overview__stars {
+        display: none; } }
   .overview__icon-star {
     width: 1.75rem;
     height: 1.75rem;
@@ -215,6 +295,11 @@ body {
     height: 1.75rem;
     fill: var(--color-primary);
     margin-right: 0.5rem; }
+    @media only screen and (max-width: 41.56em) {
+      .overview__icon-location {
+        margin-right: 0;
+        width: 1.8rem;
+        height: 1.8rem; } }
   .overview__location {
     font-size: 1.2rem;
     display: flex;
@@ -229,12 +314,22 @@ body {
     align-items: center;
     padding: 0 2.25rem;
     flex-direction: column; }
+    @media only screen and (max-width: 41.56em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
     .overview__rating-average {
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -3px; }
+      @media only screen and (max-width: 41.56em) {
+        .overview__rating-average {
+          margin-bottom: 0.7rem;
+          font-size: 1.8rem; } }
     .overview__rating-count {
       font-size: 0.8rem; }
+      @media only screen and (max-width: 41.56em) {
+        .overview__rating-count {
+          font-size: 0.5rem; } }
 
 .btn-inline {
   color: var(--color-primary);
@@ -286,11 +381,16 @@ body {
       height: 1rem;
       display: inline-block;
       margin-right: 0.7rem;
-      background-color: var(--color-primary);
-      -webkit-mask-image: url(../img/chevron-thin-right.svg);
-      -webkit-mask-size: cover;
-      mask-image: url(../img/chevron-thin-right.svg);
-      mask-size: cover; }
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover; }
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        .list__item::before {
+          background-color: var(--color-primary);
+          -webkit-mask-image: url(../img/chevron-thin-right.svg);
+          -webkit-mask-size: cover;
+          mask-image: url(../img/chevron-thin-right.svg);
+          mask-size: cover;
+          background-image: none; } }
 
 .recommend {
   display: flex;
@@ -358,6 +458,12 @@ body {
     font-weight: 300;
     margin-bottom: 2.5rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 34.375em) {
+      .cta__heading {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .cta__heading {
+        font-size: 1.6rem; } }
 
 .btn {
   border: none;
@@ -370,6 +476,12 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 34.375em) {
+    .btn {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .btn {
+      font-size: 1rem; } }
   .btn > * {
     display: inline-block;
     height: 100%;
@@ -377,11 +489,17 @@ body {
     transition: all 0.2s; }
   .btn__visible {
     padding: 2rem 7.5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .btn__visible {
+        padding: 1.5rem 5rem; } }
   .btn__invisible {
     position: absolute;
     left: 0;
     top: -100%;
     padding: 2rem 0; }
+    @media only screen and (max-width: 31.25em) {
+      .btn__invisible {
+        padding: 1.5rem 0rem; } }
   .btn:hover .btn__visible {
     transform: translateY(100%); }
   .btn:hover .btn__invisible {
@@ -412,6 +530,11 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      height: 10rem;
+      padding-top: 6px; } }
 
 .content {
   display: flex; }
@@ -437,6 +560,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .detail {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -449,6 +575,10 @@ body {
     .description {
       padding: 2rem;
       margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-review {
   flex: 1;
